@@ -9,6 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorLoginApp.Client", "Bl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorLoginApp.Shared", "BlazorLoginApp\Shared\BlazorLoginApp.Shared.csproj", "{63C2511D-8A71-47A5-A2EB-D2FA7CA23B22}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "database", "database", "{99E7F0DD-3A69-4D48-83FF-CBFC5E487EC5}"
+	ProjectSection(SolutionItems) = preProject
+		BlazorAppDB.sql = BlazorAppDB.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
