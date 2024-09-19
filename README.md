@@ -35,7 +35,7 @@ BlazorLoginApp/
 1. Abra o **SQL Server Management Studio (SSMS)**.
 2. Conecte-se ao seu servidor SQL.
 3. No menu superior, clique em `Nova Consulta`.
-4. Abra o arquivo `criar_banco.sql` localizado na pasta `database` do projeto e copie o conteúdo.
+4. Abra o arquivo `BlazorAppDB.sql` localizado na pasta `database` do projeto e copie o conteúdo.
 5. Cole o conteúdo no editor de consulta do SSMS e execute o script para criar a tabela necessária (`Users`).
 
 ## 🎮 Como Executar o Projeto
