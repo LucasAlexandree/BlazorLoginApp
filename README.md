@@ -20,7 +20,7 @@ BlazorLoginApp/
 ├── BlazorLoginApp.Server/       # Projeto Server (ASP.NET Core)
 ├── BlazorLoginApp.Shared/       # Projeto Compartilhado (Modelos, DTOs)
 ├── database/                    # Contém o script SQL para criação do banco de dados
-│   └── criar_banco.sql
+│   └── BlazorAppDB.sql
 └── README.md                    # Este arquivo
 ```
 
