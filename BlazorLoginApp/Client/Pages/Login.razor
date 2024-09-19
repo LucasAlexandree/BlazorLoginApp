@@ -1,0 +1,46 @@
+﻿@page "/login"
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<EditForm Model="@loginModel" OnValidSubmit="HandleLogin" class="login-form">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="form-group">
+        <label>Email</label>
+        <InputText @bind-Value="loginModel.Email" class="form-control" />
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <InputText @bind-Value="loginModel.Password" type="password" class="form-control" />
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+    @if (!string.IsNullOrEmpty(errorMessage))
+    {
+        <p class="text-danger">@errorMessage</p>
+    }
+</EditForm>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+    private string errorMessage;
+
+    private async Task HandleLogin()
+    {
+        var response = await Http.PostAsJsonAsync("api/auth/login", loginModel);
+        if (response.IsSuccessStatusCode)
+        {
+            Navigation.NavigateTo("/home");
+        }
+        else
+        {
+            errorMessage = "Email ou senha inválidos.";
+        }
+    }
+
+    public class LoginModel
+    {
+        public string Email { get; set; }
+        public string Password { get; set; }
+    }
+}
